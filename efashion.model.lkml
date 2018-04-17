@@ -12,3 +12,5 @@ datagroup: efashion_default_datagroup {
 }
 
 persist_with: efashion_default_datagroup
+
+explore: shop_clone {}
