@@ -1,5 +1,5 @@
 view: calendar_year_lookup {
-  sql_table_name: CALENDAR_YEAR_LOOKUP ;;
+  sql_table_name: BOBJ.CALENDAR_YEAR_LOOKUP ;;
 
   dimension: holiday_flag {
     label: "Holiday (y/n)"

@@ -1,5 +1,5 @@
 view: promotion_lookup {
-  sql_table_name: PROMOTION_LOOKUP ;;
+  sql_table_name: BOBJ.PROMOTION_LOOKUP ;;
 
   dimension: promotion_flag {
     label: "Promotion (y/n)"

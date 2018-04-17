@@ -1,5 +1,5 @@
 view: shop_facts {
-  sql_table_name: SHOP_FACTS ;;
+  sql_table_name: BOBJ.SHOP_FACTS ;;
 
   dimension: id {
     label: "ID"

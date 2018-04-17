@@ -1,5 +1,5 @@
 view: product_promotion_facts {
-  sql_table_name: PRODUCT_PROMOTION_FACTS ;;
+  sql_table_name: BOBJ.PRODUCT_PROMOTION_FACTS ;;
 
   dimension: id {
     label: "ID"

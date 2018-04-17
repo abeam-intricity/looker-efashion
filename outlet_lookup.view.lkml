@@ -1,5 +1,5 @@
 view: outlet_lookup {
-  sql_table_name: OUTLET_LOOKUP ;;
+  sql_table_name: BOBJ.OUTLET_LOOKUP ;;
 
   dimension: long_opening_hours_flag {
     label: "Long opening hours"

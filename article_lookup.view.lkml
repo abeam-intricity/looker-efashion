@@ -1,5 +1,5 @@
 view: article_lookup {
-  sql_table_name: ARTICLE_LOOKUP ;;
+  sql_table_name: BOBJ.ARTICLE_LOOKUP ;;
 
   dimension: article_code {
     label: "SKU number"

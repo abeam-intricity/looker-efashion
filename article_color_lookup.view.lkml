@@ -1,5 +1,5 @@
 view: article_color_lookup {
-  sql_table_name: ARTICLE_COLOR_LOOKUP ;;
+  sql_table_name: BOBJ.ARTICLE_COLOR_LOOKUP ;;
 
   dimension: article_code {
     label: "Article Code"
