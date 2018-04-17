@@ -7,7 +7,7 @@ view: promotion_lookup {
     group_label: "Promotions"
     type: string
     hidden: no
-    sql: (SELECT Promotion_flag FROM promotion_lookup) ;;
+    sql: ${TABLE}.promotion_flag ;;
   }
 
   dimension: promotion_key {

@@ -8,7 +8,7 @@ view: article_lookup {
     type: number
     hidden: no
     primary_key: yes
-    sql: (SELECT Article_code FROM Article_lookup) ;;
+    sql: ${TABLE}.article_code ;;
   }
 
   dimension: article_label {
@@ -17,7 +17,7 @@ view: article_lookup {
     group_label: "Product"
     type: string
     hidden: no
-    sql: (SELECT Article_label FROM Article_lookup) ;;
+    sql: ${TABLE}.article_label ;;
   }
 
   dimension: sale_price {
@@ -26,7 +26,7 @@ view: article_lookup {
     group_label: "Product"
     type: number
     hidden: no
-    sql: (SELECT Sale_price FROM Article_lookup) ;;
+    sql: ${TABLE}.sale_price ;;
   }
 
   measure: extended_price {
@@ -35,7 +35,7 @@ view: article_lookup {
     group_label: "Product"
     type: sum
     hidden: no
-    sql: (SELECT sum(Sale_price) FROM Article_lookup) ;;
+    sql: ${sale_price} ;;
   }
 
 }

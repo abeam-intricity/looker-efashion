@@ -19,7 +19,12 @@ view: product_promotion_facts {
     group_label: "Promotions"
     type: number
     hidden: no
-    sql: (SELECT Duration FROM product_promotion_facts) ;;
+    sql: ${TABLE}.duration ;;
+  }
+
+  dimension: promotion_cost {
+    label: "Promotion Cost"
+    sql: ${TABLE}.promotion_cost ;;
   }
 
   dimension: promotion_key {
@@ -32,13 +37,13 @@ view: product_promotion_facts {
     sql: ${TABLE}.week_key ;;
   }
 
-  measure: promotion_cost {
+  measure: total_promotion_cost {
     label: "Promotion Cost USD"
     description: "Cost of promoting the SKU (in US dollars)."
     group_label: "Promotions"
     type: sum
     hidden: no
-    sql: (SELECT sum(Promotion_cost) FROM product_promotion_facts) ;;
+    sql: ${promotion_cost} ;;
   }
 
 }

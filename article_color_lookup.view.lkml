@@ -18,7 +18,7 @@ view: article_color_lookup {
     group_label: "Product"
     type: string
     hidden: no
-    sql: (SELECT Color_label FROM Article_Color_Lookup) ;;
+    sql: ${TABLE}.color_label ;;
   }
 
 }

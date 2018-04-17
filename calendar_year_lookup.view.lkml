@@ -7,7 +7,7 @@ view: calendar_year_lookup {
     group_label: "Time period"
     type: string
     hidden: no
-    sql: (SELECT ucase(Holiday_Flag) FROM Calendar_year_lookup) ;;
+    sql: UPPER(${TABLE}.holiday_flag) ;;
   }
 
   dimension: week_key {

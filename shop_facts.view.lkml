@@ -18,6 +18,11 @@ view: shop_facts {
     sql: ${TABLE}.color_code ;;
   }
 
+  dimension: quantity_sold {
+    label: "Quantity Sold"
+    sql: ${TABLE}.quantity_sold ;;
+  }
+
   dimension: shop_code {
     label: "Shop Code"
     sql: ${TABLE}.shop_code ;;
@@ -34,7 +39,7 @@ view: shop_facts {
     group_label: "Measures"
     type: sum
     hidden: no
-    sql: (SELECT sum(Quantity_sold * Article_lookup) FROM Shop_facts) ;;
+    sql: ${quantity_sold} * ${article_code} ;;
   }
 
 }

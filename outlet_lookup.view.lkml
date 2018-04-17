@@ -7,7 +7,7 @@ view: outlet_lookup {
     group_label: "Store details"
     type: string
     hidden: no
-    sql: (SELECT Long_opening_hours_flag FROM Outlet_Lookup) ;;
+    sql: ${TABLE}.long_opening_hours_flag ;;
   }
 
   dimension: manager {
@@ -16,7 +16,7 @@ view: outlet_lookup {
     group_label: "Store details"
     type: string
     hidden: no
-    sql: (SELECT Manager FROM Outlet_Lookup) ;;
+    sql: ${TABLE}.manager ;;
   }
 
   dimension: date_open {
@@ -25,7 +25,7 @@ view: outlet_lookup {
     group_label: "Store details"
     type: string
     hidden: no
-    sql: (SELECT Date_open FROM Outlet_Lookup) ;;
+    sql: ${TABLE}.date_open ;;
   }
 
   dimension: owned_outright_flag {
@@ -34,7 +34,7 @@ view: outlet_lookup {
     group_label: "Store details"
     type: string
     hidden: no
-    sql: (SELECT Owned_outright_flag FROM Outlet_Lookup) ;;
+    sql: ${TABLE}.owned_outright_flag ;;
   }
 
   dimension: floor_space {
@@ -43,7 +43,7 @@ view: outlet_lookup {
     group_label: "Store details"
     type: string
     hidden: no
-    sql: (SELECT Floor_space FROM Outlet_Lookup) ;;
+    sql: ${TABLE}.floor_space ;;
   }
 
   dimension: shop_code {
@@ -58,7 +58,7 @@ view: outlet_lookup {
     group_label: "Store details"
     type: sum
     hidden: no
-    sql: (SELECT sum (Floor_space) FROM Outlet_Lookup) ;;
+    sql: ${floor_space} ;;
   }
 
 }
